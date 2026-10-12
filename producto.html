@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Producto | Raíces de Barro</title>
+    <meta name="description" content="Detalle del producto de cerámica artesanal boliviana.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <span>Envío gratis en compras mayores a Bs. 200 · Bolivia</span>
+        <button type="button" class="top-bar-close" id="cerrar-topbar" aria-label="Cerrar barra">✕</button>
+    </div>
+
+    <header class="header">
+        <div class="header-izquierda">
+            <a href="index.html" class="logo" aria-label="Raíces de Barro, ir al inicio">
+                <svg class="logo-icono" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M8 3h8l-1 3c2.5 1.5 4 4 4 7 0 4.5-3.5 8-8 8s-8-3.5-8-8c0-3 1.5-5.5 4-7L8 3z"/>
+                    <path d="M7 10c3 1 7 1 10 0"/>
+                    <path d="M6.5 14c3.5 1 7.5 1 11 0"/>
+                </svg>
+                <div class="logo-texto">
+                    <span class="logo-titulo">Raíces de Barro</span>
+                    <span class="logo-subtitulo">Alfarería de Quillacollo</span>
+                </div>
+            </a>
+        </div>
+
+        <nav class="header-centro" aria-label="Navegación principal">
+            <a href="index.html" class="link-header">Inicio</a>
+            <a href="index.html#catalogo" class="link-header">Catálogo</a>
+            <a href="alfareros.html" class="link-header">Alfareros</a>
+            <a href="index.html#sobre" class="link-header">Sobre Nosotros</a>
+        </nav>
+
+        <div class="header-derecha">
+            <button type="button" id="btn-favoritos" class="btn-header" title="Favoritos" aria-label="Ver favoritos">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                </svg>
+                <span id="contador-favoritos">0</span>
+            </button>
+            <a href="carrito.html" class="btn-header" title="Carrito" aria-label="Ir al carrito">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="9" cy="21" r="1"/>
+                    <circle cx="20" cy="21" r="1"/>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                </svg>
+                <span id="contador-carrito">0</span>
+            </a>
+            <a href="#" class="btn-registrar">Cuenta</a>
+        </div>
+    </header>
+
+    <main class="producto-main">
+        <nav class="breadcrumb-nav" aria-label="Migas de pan">
+            <a href="index.html">Inicio</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="index.html#catalogo">Catálogo</a>
+            <span class="breadcrumb-sep">/</span>
+            <span id="breadcrumb-categoria">Categoría</span>
+            <span class="breadcrumb-sep">/</span>
+            <span id="breadcrumb-producto" class="breadcrumb-actual">Producto</span>
+        </nav>
+
+        <div id="producto-detalle" class="producto-detalle">
+            <div class="producto-galeria">
+                <div class="galeria-principal">
+                    <img id="imagen-principal" src="" alt="Producto">
+                    <span id="badge-nuevo" class="etiqueta-nuevo" style="display:none;">Nuevo</span>
+                </div>
+                <div class="galeria-thumbnails" id="galeria-thumbnails"></div>
+            </div>
+
+            <div class="producto-info-detalle">
+                <div class="producto-categoria-badge" id="producto-categoria-badge">Categoría</div>
+                <h1 id="producto-nombre">Nombre del producto</h1>
+
+                <div class="producto-rating-detalle">
+                    <span id="producto-rating-estrellas">★★★★★</span>
+                    <span id="producto-rating-numero">4.5</span>
+                    <span class="rating-sep">•</span>
+                    <span id="producto-material">Material</span>
+                </div>
+
+                <div class="producto-precio-detalle">
+                    <span id="producto-precio">Bs. 0.00</span>
+                    <span id="producto-rango" class="precio-rango">Rango: Bs. 0 – Bs. 0</span>
+                </div>
+
+                <p class="producto-descripcion" id="producto-descripcion">Descripción del producto.</p>
+
+                <div class="producto-cantidad-seccion">
+                    <label>Cantidad:</label>
+                    <div class="selector-cantidad">
+                        <button type="button" id="btn-restar" class="btn-cantidad-lg" aria-label="Restar cantidad">−</button>
+                        <span id="cantidad-valor">1</span>
+                        <button type="button" id="btn-sumar" class="btn-cantidad-lg" aria-label="Sumar cantidad">+</button>
+                    </div>
+                </div>
+
+                <div class="producto-acciones-detalle">
+                    <button type="button" id="btn-agregar-carrito" class="btn-primario-lg">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="9" cy="21" r="1"/>
+                            <circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                        Agregar al Carrito
+                    </button>
+                    <button type="button" id="btn-favorito-detalle" class="btn-favorito-lg" title="Añadir a favoritos" aria-label="Añadir a favoritos" aria-pressed="false">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="producto-alfarero-info">
+                    <div class="alfarero-info-header">
+                        <img id="alfarero-img" src="" alt="" onerror="this.style.display='none'">
+                        <div>
+                            <span class="alfarero-label">Hecho por</span>
+                            <a id="alfarero-nombre-link" href="#" class="alfarero-nombre">
+                                <strong id="alfarero-nombre">Alfarero</strong>
+                            </a>
+                            <span id="alfarero-especialidad" class="alfarero-especialidad"></span>
+                        </div>
+                    </div>
+                    <a id="btn-ver-alfarero" href="#" class="btn-ver-alfarero-detalle">
+                        Ver perfil del alfarero →
+                    </a>
+                </div>
+
+                <div class="producto-beneficios">
+                    <div class="beneficio-item">
+                        <span class="beneficio-icono" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 11V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v0"/>
+                                <path d="M14 10V4a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v2"/>
+                                <path d="M10 10.5V6a2 2 0 0 0-2-2v0a2 2 0 0 0-2 2v8"/>
+                                <path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Hecho a mano</strong>
+                            <small>Artesanía 100% boliviana</small>
+                        </div>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icono" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+                                <line x1="12" y1="22.08" x2="12" y2="12"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Envío asegurado</strong>
+                            <small>Embalaje especial para cerámica</small>
+                        </div>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icono" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/>
+                                <path d="M12 6v2m0 8v2"/>
+                            </svg>
+                        </span>
+                        <div>
+                            <strong>Comercio justo</strong>
+                            <small>Apoyas directamente al alfarero</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="productos-relacionados">
+            <div class="seccion-header">
+                <h2>También te puede gustar</h2>
+                <p>Otros productos de la misma categoría</p>
+            </div>
+            <div id="grid-relacionados" class="grid-productos"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido">
+            <div class="footer-columna">
+                <h3>Raíces de Barro</h3>
+                <p>Alfarería auténtica de Quillacollo, Cochabamba, Bolivia.</p>
+            </div>
+            <div class="footer-columna">
+                <h3>Enlaces</h3>
+                <a href="index.html#catalogo">Catálogo</a>
+                <a href="alfareros.html">Alfareros</a>
+                <a href="index.html#sobre">Sobre Nosotros</a>
+            </div>
+            <div class="footer-columna">
+                <h3>Contacto</h3>
+                <p class="contacto-linea">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                        <circle cx="12" cy="10" r="3"/>
+                    </svg>
+                    Quillacollo, Cochabamba, Bolivia
+                </p>
+                <p class="contacto-linea">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    info@raicesdebarro.bo
+                </p>
+                <p class="contacto-linea">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    +591 700 00000
+                </p>
+            </div>
+            <div class="footer-columna">
+                <h3>Síguenos</h3>
+                <div class="redes">
+                    <a href="https://wa.me/59170000000" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                    </a>
+                    <a href="https://instagram.com/raicesdebarro" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                    </a>
+                    <a href="https://facebook.com/raicesdebarro" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Raíces de Barro © 2026 | Hecho con orgullo en Bolivia</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container"></div>
+
+    <script src="js/utils.js"></script>
+    <script src="js/alfareros.js"></script>
+    <script src="js/productos.js"></script>
+    <script src="js/producto.js"></script>
+
+</body>
+</html>
